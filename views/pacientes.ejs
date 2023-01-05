@@ -12,7 +12,14 @@
     <%-include("header.ejs") %>
     <main>
         <div class="quadro-pacientes">
-            <h1>Pacientes</h1>
+            <div class="busca-box">
+                <input type="text" name="" id="nome-cpf" placeholder="Nome ou cpf">
+                <select name="opcao" id="opcao">
+                    <option value="cpf">CPF</option>
+                    <option value="nome">Nome</option>
+                </select>
+                <input type="button" value="Buscar" id="bus-btn" onclick="show()">
+            </div>
             <table class="tabela-paciente">
                 <tr>
                     <th>Nome</th>
@@ -29,7 +36,7 @@
                     <td>000.000.000-00</td>
                     <td>30/03/2000</td>
                     <td>
-                        <input type="button" value="OK" onclick="show(this)" id="enc-btn">
+                        <input type="button" value="Ver" id="enc-btn">
                     </td>
                 </tr>
             </table>
@@ -37,11 +44,22 @@
     </main>
     <%-include("footer.ejs") %>
 </body>
+<script src="../libs/jquery-3.6.1.min.js"></script>
+<script src=" https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
-    let tr = document.getElementById("tr")
-    function show(tag){
-        alert(tr.children[0].innerHTML)
-    }
-    
+    let busca = document.getElementById("bus-btn")
+
+    busca.addEventListener("click", function(){
+        $.ajax({
+        method:"GET",
+        url:"/consultar-pacientes",
+        data:{
+            nome: document.getElementById("nome-cpf").value,
+            tipo: document.getElementById("opcao").value
+        }
+        }).done((res)=>{
+            alert(res)
+        })
+    })
 </script>
 </html>

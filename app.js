@@ -11,5 +11,12 @@ app.get("/", (req, res)=>{
 app.get("/today", (req, res)=>{
     res.render("today", {})
 })
+app.get("/pacientes", (req, res)=>{
+    res.render("pacientes", {})
+})
+
+app.get("/consultar-pacientes", (req, res)=>{
+    res.send("pacientes")
+})
 
 app.listen(5555)
