@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para hoje</title>
+</head>
+    <%-include("./style/base.ejs") %>
+    <%-include("./style/today-style.ejs") %>
+<body>
+    <%-include("header.ejs") %>
+    <main>
+        <div class="quadro-pacientes">
+            <table class="tabela-paciente">
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Área</th>
+                    <th>CPF</th>
+                    <th>Data de Consulta</th>
+                    <th>Encerrar</th>
+                </tr>
+                <tr id="tr">
+                    <td>Jamir</td>
+                    <td>22</td>
+                    <td>Psicólogo</td>
+                    <td>000.000.000-00</td>
+                    <td>30/03/2000</td>
+                    <td>
+                        <input type="button" value="OK" onclick="show(this)">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <%-include("footer.ejs") %>
+</body>
+<script>
+    let tr = document.getElementById("tr")
+    function show(tag){
+        alert(tr.children[0].innerHTML)
+    }
+    
+</script>
+</html>

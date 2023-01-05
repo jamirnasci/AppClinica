@@ -5,9 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <%- include('./style/base.ejs') %>
 </head>
 <body>
-    
+    <%- include('header.ejs')%>
+
+        <main>
+            <form action="" method="get">
+                <div class="form-side">
+                    <label>Nome:</label>
+                    <input type="text" name="" id="" placeholder="Nome">
+                    <label>Idade:</label>
+                    <input type="text" name="" id="" placeholder="Idade">
+                    <label>Área:</label>
+                    <input type="text" name="" id="" placeholder="Área de consulta">
+                    <label>CPF:</label>
+                    <input type="text" name="" id="" placeholder="CPF">
+                    <label>Data da Consulta:</label>
+                    <input type="date" name="" id="">
+                </div>
+                <div class="form-side">
+                    <label>Convênio:</label>
+                    <input type="text" name="" id="" placeholder="Convênio">
+                    <label>Endereço:</label>
+                    <input type="text" name="" id="" placeholder="Endereço">
+                    <label>Número:</label>
+                    <input type="text" name="" id="" placeholder="Número">
+                    <label>Bairro:</label>
+                    <input type="text" name="" id="" placeholder="Bairro">
+                    <label>PCD:</label>
+                    <input type="checkbox" name="" id="">
+                </div>
+                <input type="submit" id="sub-btn">
+            </form>
+        </main>
+
     <%- include('footer.ejs')%>
 </body>
 </html>

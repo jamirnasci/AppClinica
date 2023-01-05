@@ -1,0 +1,79 @@
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+html{
+    height: 90%;
+}
+header {
+    position: sticky;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(to top, lightblue, azure);
+    height: 10%;
+}
+.link-box{
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+}
+header > .link-box > a {
+    outline: none;
+    text-decoration: none;
+    color: darkslategrey;
+    background-color: whitesmoke;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-left: 1em;
+    margin-right: 1em;
+    font-size: 22px;
+    padding: 5px;
+}
+body{
+    height: 100%;
+}
+main{
+    height: 90%;
+    background-color: aquamarine;
+}
+main > form {
+    display: flex;
+    flex-wrap: wrap;    
+    background-color: aliceblue;
+    justify-content: center;
+}
+#sub-btn{
+    margin: 20px;
+    font-size: 20px;
+    background:linear-gradient(to top, lightblue, azure);
+    border: solid 1px teal;
+    border-radius: 10px;
+    padding: 5px;
+    letter-spacing: 2px;
+}
+main > form > .form-side{
+    margin: auto;
+    width: 50%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main > form > label, input {
+    display: block;
+    margin: 5px;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkcyan;
+    text-align: center;
+    height: 60px;
+
+}
+</style>
