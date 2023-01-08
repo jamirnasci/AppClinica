@@ -21,15 +21,15 @@ app.get("/consultar-pacientes", (req, res)=>{
 
 app.get("/cadastrar-pacientes", (req, res)=>{
     console.log(`
-        Nome: ${req.query.nome}\n
-        Idade: ${req.query.idade}\n
-        Area: ${req.query.area}\n
-        CPF: ${req.query.cpf}\n
-        Data: ${req.query.data}\n
-        Convenio: ${req.query.convenio}\n
-        Endereco: ${req.query.endereco}\n
-        Bairro: ${req.query.bairro}\n
-        pcd: ${req.query.pcd}\n
+        Nome: ${req.query.nome}
+        Idade: ${req.query.idade}
+        Area: ${req.query.area}
+        CPF: ${req.query.cpf}
+        Data: ${req.query.data}
+        Convenio: ${req.query.convenio}
+        Endereco: ${req.query.endereco}
+        Bairro: ${req.query.bairro}
+        pcd: ${req.query.pcd}
     `)
 
     res.send("recebido")

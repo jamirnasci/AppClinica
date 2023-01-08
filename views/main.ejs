@@ -12,33 +12,36 @@
     <%- include('header.ejs')%>
 
         <main>
-            <form action="/cadastrar-pacientes" method="get">
+            <div action="/cadastrar-pacientes" id="cadastro">
                 <div class="form-side">
                     <label>Nome:</label>
-                    <input type="text" name="" id="nome" placeholder="Nome">
+                    <input type="text" name="nome" id="nome" placeholder="Nome">
                     <label>Idade:</label>
-                    <input type="text" name="" id="idade" placeholder="Idade">
+                    <input type="text" name="idade" id="idade" placeholder="Idade">
                     <label>Área:</label>
-                    <input type="text" name="" id="area" placeholder="Área de consulta">
+                    <input type="text" name="area" id="area" placeholder="Área de consulta">
                     <label>CPF:</label>
-                    <input type="text" name="" id="cpf" placeholder="CPF">
+                    <input type="text" name="cpf" id="cpf" placeholder="CPF">
                     <label>Data da Consulta:</label>
-                    <input type="date" name="" id="data">
+                    <input type="date" name="data" id="data">
                 </div>
                 <div class="form-side">
                     <label>Convênio:</label>
-                    <input type="text" name="" id="conv" placeholder="Convênio">
+                    <input type="text" name="conv" id="conv" placeholder="Convênio">
                     <label>Endereço:</label>
-                    <input type="text" name="" id="endereco" placeholder="Endereço">
+                    <input type="text" name="endereco" id="endereco" placeholder="Endereço">
                     <label>Número:</label>
-                    <input type="text" name="" id="numero" placeholder="Número">
+                    <input type="text" name="numero" id="numero" placeholder="Número">
                     <label>Bairro:</label>
-                    <input type="text" name="" id="bairro" placeholder="Bairro">
+                    <input type="text" name="bairro" id="bairro" placeholder="Bairro">
                     <label>PCD:</label>
-                    <input type="checkbox" name="" id="">
+                    <select name="pcd" id="pcd">
+                        <option value="sim">sim</option>
+                        <option value="nao">não</option>
+                    </select>
                 </div>
-                <input type="submit" id="sub-btn" value="enviar">
-            </form>
+                <input type="button" id="sub-btn" value="enviar">
+            </div>
         </main>
 
     <%- include('footer.ejs')%>
@@ -46,9 +49,9 @@
 <script src="../libs/jquery-3.6.1.min.js"></script>
 <script src=" https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
-    let submit = document.getElementById("sub-btn")
+    let sub_btn = document.getElementById("sub-btn")
 
-    submit.addEventListener("click", function(){
+    sub_btn.addEventListener("click", function(){
         $.ajax({
         method:"GET",
         url:"/cadastrar-pacientes",
