@@ -1,0 +1,13 @@
+CREATE TABLE pacientes (
+    id int not null PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(200) not null,
+    cpf VARCHAR(11) UNIQUE not null,
+    idade int not null,
+    area VARCHAR(200) not null,
+    data_consulta VARCHAR(20) not null,
+    convenio VARCHAR(200) not null,
+    endereco VARCHAR(200) not null,
+    numero VARCHAR(10) not null,
+    bairro VARCHAR(200) not null,
+    pcd VARCHAR(5) not null
+);
